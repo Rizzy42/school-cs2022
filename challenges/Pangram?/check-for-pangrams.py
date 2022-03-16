@@ -7,7 +7,7 @@ def main():
 	# Will be used to give the line number
 	line_index = 1
 
-	with open("Pangrams.txt", "r") as pangrams:
+	with open("pangrams.txt", "r") as pangrams:
 		pangram_lines = pangrams.readlines()
 		for line in pangram_lines:
 			# Converting to lower means that we don't also have to compare capital letters

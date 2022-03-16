@@ -1,0 +1,2 @@
+alanguage = "python3"
+run = "python main.py"
