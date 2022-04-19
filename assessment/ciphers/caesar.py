@@ -69,7 +69,8 @@ class CaesarCipherInstance:
 
 				mutate(alphabet_local[letter_shifted_index])
 
-			# Symbols and numbers shouldn't be shifted
+			# While the instructions called for alphabet letters only, most messages won't consist of such
+			# It'll be helpful to preserve them in the original message to make this program more useful
 			else:
 				mutate(letter)
 
