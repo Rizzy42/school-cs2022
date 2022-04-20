@@ -1,16 +1,9 @@
 # Classes are more portable and concise than functions
-class CaesarCipherInstance:
-	# Initialises the three main components of the cipher
-	def __init__(self, plaintext, ciphertext, key):
+class AtbashCipherInstance:
+	# Initialises the two components of the cipher
+	def __init__(self, plaintext, ciphertext):
 		self.plaintext = plaintext
 		self.ciphertext = ciphertext
-		# We want to make sure we won't get an unexpected error if the array index of the alphabet is too large or too low
-		if key > 25:
-			raise Exception("Input key is too large")
-		elif key < 1:
-			raise Exception("Input key is too low")
-		else:
-			self.key = key
 
 	# These are used to help maintain capitalisation in messages
 	alphabet_lower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
@@ -53,20 +46,7 @@ class CaesarCipherInstance:
 					alphabet_local = alphabet_upper
 
 				# Genereates the shifted index using the user's key
-				letter_index = alphabet_local.index(letter)
-				if operation == "encrypt":
-					letter_shifted_index = letter_index + self.key
-				else:
-					letter_shifted_index = letter_index - self.key
-				
-				if operation == "encrypt":
-					# If the shifted index is greater than accessing the array with it will give an out of range error
-					if letter_shifted_index > 25:
-						letter_shifted_index = letter_shifted_index - 26
-				else:
-					if letter_shifted_index < 0:
-						letter_shifted_index = letter_shifted_index + 26
-
+				letter_shifted_index = 25 - alphabet_local.index(letter)
 				mutate(alphabet_local[letter_shifted_index])
 
 			# While the instructions called for alphabet letters only, most messages won't consist of such
