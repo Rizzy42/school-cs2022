@@ -2,6 +2,7 @@
 class CaesarCipherInstance:
 	# Initialises the three main components of the cipher
 	def __init__(self, plaintext, ciphertext, key):
+		self.ciphertype = "caesar"
 		self.plaintext = plaintext
 		self.ciphertext = ciphertext
 		# We want to make sure we won't get an unexpected error if the array index of the alphabet is too large or too low

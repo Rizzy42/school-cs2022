@@ -2,6 +2,7 @@
 class AtbashCipherInstance:
 	# Initialises the two components of the cipher
 	def __init__(self, plaintext, ciphertext):
+		self.ciphertype = "atbash"
 		self.plaintext = plaintext
 		self.ciphertext = ciphertext
 
