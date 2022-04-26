@@ -1,24 +1,23 @@
+# This main program brings all the components together and does the actual heavy work of encryption
+
+# Initialises colorama to convert ANSI codes to win32 so that the display correctly on Windows
 from colorama import init as colorama_init 
-from colorama import Fore, Back, Style
+
 from utils.files import importLines, writeLines, appendLines
-from interface.interactions import getInteger
+
+# Interface programs
+from interface.input_source import getInputSource
+
 from ciphers.caesar import CaesarCipherInstance
 from ciphers.atbash import AtbashCipherInstance
 
 colorama_init()
 
 def main():
-	user_source_option = 0
+	# All the abstraction paid off, this looks great!
+	user_source_option = getInputSource()
 	user_cipher_option = 0
 	user_crypt_option = 0
-
-	print("Welcome to the Encryptor.")
-
-	user_source_option = getInteger('''
-Please select an input source:
-1. External file
-2. Direct input string
-''', [1, 2])
 
 	
 if __name__ == "__main__":

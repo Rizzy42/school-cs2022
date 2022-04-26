@@ -1,3 +1,7 @@
+# Provides convenient methods that may be needed by other interface programs 
+from utils.colorama_fore import red, white
+
+# Provides a way of safely getting an integer from the user
 def getInteger(prompt, numbers):
 	while True:
 		try:
@@ -7,6 +11,6 @@ def getInteger(prompt, numbers):
 			
 			return return_int
 		except ValueError:
-			print("\nThat's not an integer.")
+			print("\n{red}ERROR{white} That's not an integer.")
 		except Exception:
-			print(f"\nPlease select from the list of given options [{numbers[0]}-{numbers[len(numbers) - 1]}]")
+			print(f"\n{red}ERROR{white} Please select from the list of given options [{numbers[0]}-{numbers[len(numbers) - 1]}]")

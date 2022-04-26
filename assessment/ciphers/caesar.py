@@ -2,6 +2,7 @@
 class CaesarCipherInstance:
 	# Initialises the three main components of the cipher
 	def __init__(self, plaintext, ciphertext, key):
+		# Identification of cipher
 		self.ciphertype = "caesar"
 		self.plaintext = plaintext
 		self.ciphertext = ciphertext
