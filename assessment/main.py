@@ -1,8 +1,7 @@
 from colorama import init as colorama_init 
 from colorama import Fore, Back, Style
-
 from utils.files import importLines, writeLines, appendLines
-from utils.interactions import getInteger
+from interface.interactions import getInteger
 from ciphers.caesar import CaesarCipherInstance
 from ciphers.atbash import AtbashCipherInstance
 
