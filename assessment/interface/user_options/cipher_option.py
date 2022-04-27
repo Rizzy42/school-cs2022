@@ -1,8 +1,7 @@
-
 from interface.interactions import getInteger
 from ciphers.cipher_data import included_ciphers
 
-from utils.colorama_style import main_style, option_style, reset_style
+from styles.colorama_style import main_style, option_style, reset_style
 
 def getCipherOption():
 	print(f"\n{main_style}What cipher would you like to use?")

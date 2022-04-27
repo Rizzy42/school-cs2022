@@ -1,5 +1,5 @@
 # Provides convenient methods that may be needed by other interface programs 
-from utils.colorama_fore import red, white
+from styles.colorama_fore import red, white
 
 # Provides a way of safely getting an integer from the user
 def getInteger(prompt, numbers):

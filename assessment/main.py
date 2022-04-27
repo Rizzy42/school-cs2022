@@ -7,6 +7,7 @@ from utils.files import importLines, writeLines, appendLines
 
 # Interface programs
 from interface.user_options.input_source import getInputSource
+from interface.user_options.crypt_option import getCryptOption
 from interface.user_options.cipher_option import getCipherOption
 
 from ciphers.caesar import CaesarCipherInstance
@@ -17,8 +18,8 @@ colorama_init()
 def main():
 	# All the abstraction paid off, this looks great!
 	user_source_option = getInputSource()
+	user_crypt_option = getCryptOption()
 	user_cipher_option = getCipherOption()
-	user_crypt_option = 0
 
 	
 if __name__ == "__main__":
