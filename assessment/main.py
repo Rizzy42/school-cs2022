@@ -6,7 +6,8 @@ from colorama import init as colorama_init
 from utils.files import importLines, writeLines, appendLines
 
 # Interface programs
-from interface.input_source import getInputSource
+from interface.user_options.input_source import getInputSource
+from interface.user_options.cipher_option import getCipherOption
 
 from ciphers.caesar import CaesarCipherInstance
 from ciphers.atbash import AtbashCipherInstance
@@ -16,7 +17,7 @@ colorama_init()
 def main():
 	# All the abstraction paid off, this looks great!
 	user_source_option = getInputSource()
-	user_cipher_option = 0
+	user_cipher_option = getCipherOption()
 	user_crypt_option = 0
 
 	
