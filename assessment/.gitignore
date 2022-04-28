@@ -1,4 +1,0 @@
-# Files like __pycache__ shouldn't be committed
-*.pyc
-build
-dist
